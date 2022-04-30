@@ -35,9 +35,58 @@
                 <!-- Photo grid -->
                 <div class="w3-row">
                     <div class="w3-third">
-                        <img src="https://i.postimg.cc/tg9NgfLR/Header-Image.png" style="width:100%" onclick="onCLick(this)" alt="Jaamine as she ponders what she is going to do next in life. ">
+                        <img src="https://i.postimg.cc/tg9NgfLR/Header-Image.png" style="width:100%" onclick="onClick(this)" alt="Jasmine as she ponders what she is going to do next in life. I always said that I would come back to this and improve on the original page. Well, here is the second ideation of Jasmine's tribute page, with my technical skills that have grown.">
+                        <img src="https://i.postimg.cc/pTYg8bLs/Holland-Picture.jpg" style="width:100%" onclick="onClick(this)" alt="All the way back in 1995 in May, on the 31st day, Jasmine was born in a small country called the Netherlands, which makes her Dutch, I know, crazy, right. The weather was a lovely day that ranged from 55 to 65 degrees F. The photo below shows one of her favorite seasons because of the layers that she can wear. Just like this site, the touches of colors that she likes are shades of reds and purples.">
+                        <img src="https://i.postimg.cc/fWp8Z7Q8/USAPicture.jpg" style="width:100%" onclick="onClick(this)" alt="Then during some time back in 1997 her family moved to the USA. That year was also when Google.com was registered as a domain name. Another fun fact is that the average cost of a new home was $176,000 in America. That can now get you a nice small something something in today's money. Her life in Southern California can be seen within this photo. Southern California has mostly clear and sunny skies year-round that give a soft glow that can be seen on her face and that of her little furbaby, Meeko.">
+                    </div>
+
+                    <div class="w3-third">
+                        <img src="https://i.postimg.cc/9QpS5nX9/Aliso-Picture.jpg" style="width:100%" onclick="onClick(this)" alt="Fast forward to 2013 she graduated from Aliso Niguel High School. Her school is a California Distinguished School, a National Blue Ribbon School, and a New American High School(this means she went to an intelligent school, y'all. We can trust her.). Once again, we can see the SoCal weather within this one photo. We have beautiful beaches here in Southern California that you can visit year-round because even on the colder days, a jacket and long sleeve shirt are enough to get you out to the shores.">
+                        <img src="https://i.postimg.cc/vmwRbV5R/UCRPicture.jpg" style="width:100%" onclick="onClick(this)" alt="During the year of 2018 she graduated college from the University of California, Riverside, with her Bachelor of Science in Anthropology. During her time there, she became involved with different organizations to pursue her passion for medicine and community service, leading her to join Alpha Phi Omega. She devoted countless hours of service in her community service fraternity, along with balancing her studies and hospital job. She did it though, she a baddie y'all. Haha, this photo is the photo of me, Chris, the guy who made this, and Jasmine. I thought about putting this here because we met in college through Alpha Phi Omega. What better to remember that than with a picture of the two of us here.">
+                        <img src="https://i.postimg.cc/rsRXqCZk/San-Marcos-Picture.jpg" style="width:100%" onclick="onClick(this)" alt="Then in 2020 she graduated with her Master's in Public Health from California State University San Marcos. Like many, during COVID-19, she was getting educated and in the last year of her program. Although she did not get to walk across the stage for this degree, she again decided to take her education one step further. One of her favorite things to do in between juggling everything is finding new places to eat. You can always pair a delicious lunch or dinner meal with a great drink, too, for how demanding the workload is of the medical field.">
+                    </div>
+
+                    <div class="w3-third">
+                        <img src="https://i.postimg.cc/VsVVztc7/Med-School-Picture.jpg" style="width:100%" onclick="onClick(this)" alt="In the year, 2022 she is starting med school. It will be a journey for her out in the sunny islands. Also, she better finish because this took a lot of time to learn and make for her—free work from me people. Then again, I am a millennial and teacher, so what don't I do for free already? LOL. Honestly, this was just a cute picture to use. If anything, it can signify who knows the road ahead, and even though the weather is fall, that is also a time of the year when things hibernate before emerging ready to take the world on in the next season. Who knows what the road ahead is for either of us, but I am sure that when the 'seasons' change, both of us will be ready.">
                     </div>
                 </div>
+        <!-- Modal for full size images on click -->  
+            <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+                <span class="w3-button w3-black w3-xlarge w3-display-topright">x</span>
+                <div class="w3-modal-content w3-animage-zoom w3-center w3-transparent w3-padding-64">
+                    <img id="img01" class="w3-image">
+                    <p id="caption"></p>
+                </div>
+            </div>
+        <!-- About section -->
+            <div class-w3="w3-container w3-dark-grey w3-center w3-text-light-grey w3-padding-32" id="about">
+                <h4><b>About me</b></h4>
+                <img src="" alt="Me" class="w3-image w3-padding-32" width="600" height="650">
+                <div class="w3-content w3-justify" style="max-width:600px">
+                    <h4>Christopher Rangel</h4>
+                    <p> My name is Chris and I am learning new technical skills. I decided back in September that I wanted to move out of Education and into Technology. During my time learning about the Tech field, one job in particular stood out to me, Software Engineering. In my pursuit of learning Coding languages and the field more, I also learned about UX as a role. I have started to blend the two together and have developed so much in my own capabilities now.</p>
+                </div>
+            </div>
+        <!-- End page content -->
         </div>
+    <script>
+        // Script to open and close sidebar
+        function w3_open() {
+            document.getElementById("mySidebar").style.display ="block";
+            document.getElementById("myOverlay").style.display = "block";
+        }
+        function w3_close() {
+            document.getElementById("mySidebar").style.display = "none";
+            document.getElementById("myOverlay").style.display = "none";
+        }
+        
+        // Modal Image Gallery
+        function onClick(element) {
+            document.getElementById("img01").src = element.src;
+            document.getElementById("modal01").style.display = "block";
+            var captionText = document.getElementById("caption");
+            captionText.innerHTML = element.alt;
+        }
+    </script>
     </body>
 </html>
